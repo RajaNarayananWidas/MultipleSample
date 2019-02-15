@@ -52,7 +52,6 @@ public class BiometricDialogV23 extends BottomSheetDialog implements View.OnClic
         btnCancel = findViewById(R.id.btn_cancel);
         btnCancel.setOnClickListener(this);
 
-        imgLogo = findViewById(R.id.img_logo);
         itemTitle = findViewById(R.id.item_title);
         itemStatus = findViewById(R.id.item_status);
         itemSubtitle = findViewById(R.id.item_subtitle);

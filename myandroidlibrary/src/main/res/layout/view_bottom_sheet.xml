@@ -7,18 +7,11 @@
     android:orientation="vertical"
     android:padding="15dp">
 
-    <ImageView
-        android:id="@+id/img_logo"
-        android:layout_width="48dp"
-        android:layout_height="48dp" />
 
     <LinearLayout
         android:id="@+id/title_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@id/img_logo"
-        android:layout_marginLeft="@dimen/margin_large"
-        android:layout_toRightOf="@+id/img_logo"
         android:gravity="center"
         android:orientation="vertical">
 
@@ -33,7 +26,7 @@
             android:id="@+id/item_subtitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_xxsmall"
+            android:layout_marginTop="@dimen/margin"
             android:textColor="@color/dialog_subtitle"
             android:textSize="13dp" />
     </LinearLayout>
@@ -44,19 +37,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/title_view"
-        android:layout_marginLeft="@dimen/margin_xsmall"
-        android:layout_marginTop="@dimen/margin_large"
-        android:layout_marginRight="@dimen/margin_large"
-        android:textColor="@color/dialog_description" />
+        android:layout_marginLeft="@dimen/biometric_bottom_sheet_padding"
+        android:layout_marginTop="@dimen/biometric_bottom_sheet_padding"
+        android:layout_marginRight="@dimen/biometric_bottom_sheet_padding"
+        android:padding="5dp"
+        android:textColor="@color/dialog_title"
+        android:textSize="16sp" />
 
     <ImageView
         android:id="@+id/img_fingerprint"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:layout_below="@id/item_description"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/margin_large"
-        android:background="@drawable/bg_fingerprint"
+        android:layout_marginTop="@dimen/biometric_bottom_sheet_padding"
         android:padding="14dp"
         android:src="@drawable/ic_fingerprint" />
 
@@ -66,9 +60,26 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/img_fingerprint"
-        android:layout_marginTop="@dimen/margin_xlarge"
         android:gravity="center"
-        android:textColor="@color/dialog_status" />
+        android:padding="3dp"
+        android:layout_margin="3dp"
+        android:textColor="@color/red" />
+
+
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_status"
+        android:background="@null"
+        android:padding="5dp"
+        android:layout_margin="5dp"
+        android:text="@string/cancel"
+        android:textColor="@color/colorPrimary" />
+
+
+
+
 
 
     <Button
@@ -82,3 +93,6 @@
         android:textColor="@color/dialog_cancel_btn" />
 
 </RelativeLayout>
+
+
+
